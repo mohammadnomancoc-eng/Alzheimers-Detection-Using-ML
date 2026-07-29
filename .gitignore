@@ -1,19 +1,26 @@
-# Node & Dependencies
+# Node
 node_modules/
 **/node_modules/
 dist/
 **/dist/
 
-# Python Virtual Environments
+# Python
 venv/
 **/venv/
 __pycache__/
-/**/__pycache__/
+**/__pycache__/
 *.pyc
-
-# Local Environment & Logs
+*.pyo
+*.pyd
 .env
-.env.local
+*.db
+*.sqlite3
+
+# Logs & OS
 *.log
 .DS_Store
 .vscode/
+
+# Uploads (generated files)
+backend/uploads/
+backend/logs/
