@@ -127,6 +127,13 @@ npm run dev
 
 ---
 
+### 🌐 Vercel Deployment
+
+- **Frontend Deployment**: Connect this repository on [Vercel](https://vercel.com), select `frontend` as the Root Directory, choose `Vite` as the framework preset, and set the build command to `npm run build`. 
+- Single-page application route rewrites are configured in [frontend/vercel.json](file:///f:/Projects/AlzheimersPRoject/frontend/vercel.json).
+
+---
+
 ## 🔐 How to Login to the Researcher Dashboard
 
 1. Open the application in your browser (`http://localhost:3000`).
