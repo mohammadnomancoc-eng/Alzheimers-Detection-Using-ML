@@ -129,8 +129,8 @@ npm run dev
 
 ### 🌐 Vercel Deployment
 
-- **Multi-Service Architecture**: Configured via root [vercel.json](file:///f:/Projects/AlzheimersPRoject/vercel.json) with `frontend` (Vite SPA) and `backend` Flask service (`entrypoint: app.py`).
-- **Frontend SPA Routing**: Client-side single-page rewrites configured for Vite in both root and frontend [vercel.json](file:///f:/Projects/AlzheimersPRoject/frontend/vercel.json).
+- **Root Directory Settings**: In your Vercel Project Settings, set the **Root Directory** to `frontend`. Vercel will automatically detect the Vite React structure.
+- **Frontend SPA Routing**: Vercel handles page redirects and rewrites for Vite single-page app routes using the configuration inside [frontend/vercel.json](file:///f:/Projects/AlzheimersPRoject/frontend/vercel.json).
 
 ---
 
