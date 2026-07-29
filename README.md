@@ -129,7 +129,7 @@ npm run dev
 
 ### 🌐 Vercel Deployment
 
-- **Multi-Service Architecture**: Configured via root [vercel.json](file:///f:/Projects/AlzheimersPRoject/vercel.json) with `frontend` (Vite SPA) and `backend` services.
+- **Multi-Service Architecture**: Configured via root [vercel.json](file:///f:/Projects/AlzheimersPRoject/vercel.json) with `frontend` (Vite SPA) and `backend` Flask service (`entrypoint: app.py`).
 - **Frontend SPA Routing**: Client-side single-page rewrites configured for Vite in both root and frontend [vercel.json](file:///f:/Projects/AlzheimersPRoject/frontend/vercel.json).
 
 ---
