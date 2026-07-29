@@ -129,8 +129,8 @@ npm run dev
 
 ### 🌐 Vercel Deployment
 
-- **Frontend Deployment**: Connect this repository on [Vercel](https://vercel.com), select `frontend` as the Root Directory, choose `Vite` as the framework preset, and set the build command to `npm run build`. 
-- Single-page application route rewrites are configured in [frontend/vercel.json](file:///f:/Projects/AlzheimersPRoject/frontend/vercel.json).
+- **Multi-Service Architecture**: Configured via root [vercel.json](file:///f:/Projects/AlzheimersPRoject/vercel.json) with `frontend` (Vite SPA) and `backend` services.
+- **Frontend SPA Routing**: Client-side single-page rewrites configured for Vite in both root and frontend [vercel.json](file:///f:/Projects/AlzheimersPRoject/frontend/vercel.json).
 
 ---
 
