@@ -1,0 +1,102 @@
+/* src/components/Logo.css */
+
+.logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.25s ease;
+}
+
+.logo-icon-svg,
+.logo-icon-img {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.35));
+}
+
+.logo-lockup:hover .logo-icon-svg,
+.logo-lockup:hover .logo-icon-img {
+  transform: scale(1.06) rotate(-2deg);
+  filter: drop-shadow(0 0 14px rgba(139, 92, 246, 0.75));
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.logo-wordmark {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+}
+
+.wordmark-main {
+  color: var(--foreground, #f8fafc);
+  transition: color 0.25s ease;
+}
+
+.wordmark-accent {
+  color: var(--primary, #8b5cf6);
+  margin-left: 2px;
+  background: linear-gradient(135deg, #a78bfa 0%, var(--primary, #8b5cf6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.25s ease;
+}
+
+.logo-lockup:hover .wordmark-main {
+  color: #ffffff;
+}
+
+.logo-subtitle {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--muted-foreground, #94a3b8);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* RESPONSIVE sizing */
+@media (max-width: 768px) {
+  .logo-icon-svg,
+  .logo-icon-img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .logo-wordmark {
+    font-size: 1.35rem;
+  }
+
+  .logo-subtitle {
+    display: none; /* Hide secondary subtitle on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-lockup {
+    gap: 0.5rem;
+  }
+
+  .logo-icon-svg,
+  .logo-icon-img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .logo-wordmark {
+    font-size: 1.2rem;
+  }
+}

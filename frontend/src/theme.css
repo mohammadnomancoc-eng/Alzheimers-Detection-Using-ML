@@ -1,0 +1,147 @@
+/* src/theme.css - Central Permanent Dark Void Glassmorphism Theme Tokens */
+
+:root {
+  /* Core Color Tokens */
+  --bg-void: #090a10;
+  --foreground: #f8fafc;
+  --muted-foreground: #94a3b8;
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --primary-foreground: #ffffff;
+  
+  /* Glass Surface Tokens */
+  --border-glass: hsla(0, 0%, 100%, 0.08);
+  --border-glass-hover: hsla(263, 90%, 66%, 0.35);
+  --card-glass-bg: hsla(240, 20%, 15%, 0.5);
+  --card-glass-hover: hsla(240, 20%, 18%, 0.65);
+  --glow-purple: rgba(139, 92, 246, 0.25);
+
+  /* Radius & Spacing Tokens */
+  --radius-pill: 9999px;
+  --radius-card: 16px;
+  --radius-input: 12px;
+
+  /* Font Tokens */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Global Reset & Base Theme Rules - Permanent Dark Mode Only */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-void);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+}
+
+/* Common App Glass Card Utility */
+.glass-card {
+  background: var(--card-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-card);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--border-glass-hover);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+}
+
+/* App-wide Universal Button Styling */
+.btn-pill, .cta-button, .btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-pill:hover, .cta-button:hover, .btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-color: var(--primary-hover);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+}
+
+/* Universal Outline Icon Buttons */
+.icon-btn-outline {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-glass);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.icon-btn-outline:hover {
+  transform: translateY(-2px) scale(1.05);
+  border-color: var(--primary);
+  background: rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.35);
+  color: var(--primary);
+}
+
+/* Universal CSS Tooltip */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 0.35rem 0.65rem;
+  background: #18181b;
+  color: #f4f4f5;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  z-index: 50;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}

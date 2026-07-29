@@ -1,0 +1,263 @@
+/* src/components/ui/modem-animated-footer.css */
+
+.modem-footer-section {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.modem-footer {
+  border-top: 1px solid var(--border-glass, rgba(255, 255, 255, 0.08));
+  background-color: var(--bg-void, #090a10);
+  margin-top: 4rem;
+  position: relative;
+  color: var(--foreground, #f8fafc);
+}
+
+.modem-footer-inner {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  min-height: 32rem;
+  position: relative;
+  padding: 2.5rem 1.5rem 6rem;
+  z-index: 10;
+}
+
+.modem-footer-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.modem-footer-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modem-brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modem-brand-title {
+  color: var(--foreground, #f8fafc);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+}
+
+.modem-brand-desc {
+  color: var(--muted-foreground, #94a3b8);
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  max-width: 460px;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Social Links Row */
+.modem-social-row {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  gap: 1.25rem;
+}
+
+.modem-social-link {
+  position: relative;
+  color: var(--muted-foreground, #94a3b8);
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.modem-social-link:hover {
+  color: var(--primary, #8b5cf6);
+  transform: translateY(-3px) scale(1.15);
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.modem-social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation Links Row */
+.modem-nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted-foreground, #94a3b8);
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.modem-nav-link {
+  color: var(--muted-foreground, #94a3b8);
+  text-decoration: none;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.modem-nav-link:hover {
+  color: var(--foreground, #ffffff);
+  font-weight: 600;
+}
+
+/* Bottom Bar */
+.modem-footer-bottom {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .modem-footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.modem-copyright {
+  font-size: 0.9rem;
+  color: var(--muted-foreground, #94a3b8);
+  text-align: center;
+}
+
+.modem-creator-link {
+  font-size: 0.9rem;
+  color: var(--muted-foreground, #94a3b8);
+  text-decoration: none;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.modem-creator-link:hover {
+  color: var(--foreground, #ffffff);
+  font-weight: 500;
+}
+
+/* Giant Animated Background Text Watermark */
+.modem-watermark-text {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.15) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 0.9;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: clamp(3rem, 12vw, 10rem);
+  max-width: 95vw;
+  white-space: nowrap;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  z-index: 1;
+}
+
+/* Bottom Floating Logo Badge */
+.modem-bottom-logo-container {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  background: rgba(9, 10, 16, 0.75);
+  border: 2px solid var(--border-glass, rgba(255, 255, 255, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem;
+  z-index: 25;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.4));
+}
+
+.modem-bottom-logo-container:hover {
+  border-color: var(--primary, #8b5cf6);
+  transform: translateX(-50%) scale(1.08);
+  filter: drop-shadow(0 0 35px rgba(139, 92, 246, 0.7));
+}
+
+.modem-logo-badge-inner {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, var(--primary, #8b5cf6) 0%, #6d28d9 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .modem-logo-badge-inner {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.modem-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.85rem;
+}
+
+/* Bottom Divider Line & Shadow Overlay */
+.modem-bottom-line {
+  position: absolute;
+  bottom: 6.5rem;
+  backdrop-filter: blur(4px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-glass-hover, rgba(139, 92, 246, 0.5)) 50%, transparent 100%);
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.modem-bottom-shadow {
+  background: linear-gradient(to top, var(--bg-void, #090a10) 0%, rgba(9, 10, 16, 0.8) 50%, rgba(9, 10, 16, 0.2) 100%);
+  backdrop-filter: blur(16px);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  z-index: 2;
+  pointer-events: none;
+}

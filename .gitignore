@@ -1,0 +1,19 @@
+# Node & Dependencies
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Python Virtual Environments
+venv/
+**/venv/
+__pycache__/
+/**/__pycache__/
+*.pyc
+
+# Local Environment & Logs
+.env
+.env.local
+*.log
+.DS_Store
+.vscode/

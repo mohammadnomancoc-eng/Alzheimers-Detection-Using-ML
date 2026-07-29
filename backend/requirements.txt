@@ -1,0 +1,15 @@
+flask
+torch
+torchvision
+numpy
+pillow
+opencv-python
+reportlab
+flask-cors
+Flask-SQLAlchemy
+Flask-Migrate
+PyMySQL
+python-dotenv
+cryptography
+sqlalchemy
+tqdm
