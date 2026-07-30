@@ -11,13 +11,14 @@ from models import db  # ← This is the correct db instance!
 # Ensure all models are imported (so tables get registered)
 import models  # This triggers Patient, Result import
 
+import os
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    # CORS
-    FRONTEND_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"]
-    CORS(app, resources={r"/*": {"origins": FRONTEND_ORIGINS}}, supports_credentials=True)
+    # CORS configuration for production deployment (Vercel & local)
+    CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
     # Remove the second CORS(app) if you want to restrict origins
 
   
@@ -51,4 +52,5 @@ def create_app():
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)

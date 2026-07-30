@@ -1,9 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
 flask
 torch
 torchvision
 numpy
 pillow
-opencv-python
+opencv-python-headless
 reportlab
 flask-cors
 Flask-SQLAlchemy
@@ -13,3 +14,4 @@ python-dotenv
 cryptography
 sqlalchemy
 tqdm
+gunicorn
