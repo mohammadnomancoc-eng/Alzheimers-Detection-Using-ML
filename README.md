@@ -1,4 +1,4 @@
-# 🧠 AlzheimerAI - Early Alzheimer's Detection System Using Deep Learning
+# 🧠 AlzheimerAI - Early Alzheimer's Detection System Using Machine Learning
 
 **AlzheimerAI** is an end-to-end, medical-grade web application designed for early detection and stage classification of Alzheimer's disease using Convolutional Neural Networks (CNNs) and deep learning on brain MRI scans. 
 
