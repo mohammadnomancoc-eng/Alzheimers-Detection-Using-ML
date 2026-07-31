@@ -150,6 +150,16 @@ npm run dev
 
 ---
 
+## 🗂️ Demo MRI Dataset for Testing
+
+Want to try the AI without having your own MRI scans? We've put together a collection of real brain MRI samples covering all diagnostic stages — from *Normal / NonDemented* through *Severe Demented* — so you can test the full range of the model's capabilities right away.
+
+> **📁 [Download Demo MRI Dataset from Google Drive](https://drive.google.com/drive/folders/1Jag-bpsAdwd-cFoZXe4mSwGGeT8XkrEB?usp=sharing)**
+
+The folder contains sample `.jpg` and `.png` MRI scan images organized by classification stage. Simply download any image and upload it through the analysis form to see the AI in action.
+
+---
+
 ## 🔬 How to Analyze MRI Scan Results
 
 1. **Navigate to Analysis Form**:
@@ -168,6 +178,7 @@ npm run dev
 3. **Upload MRI Scan Image**:
    - Click the file upload box or drag and drop a brain MRI scan image (`.jpg`, `.png`, or `.jpeg` formats up to 10MB).
    - An image preview will appear.
+   - > 💡 **No MRI scan handy?** Use one of the demo images from the [Google Drive dataset](https://drive.google.com/drive/folders/1Jag-bpsAdwd-cFoZXe4mSwGGeT8XkrEB?usp=sharing) above.
 
 4. **Submit for Processing**:
    - Click **Analyze MRI Scan**.
